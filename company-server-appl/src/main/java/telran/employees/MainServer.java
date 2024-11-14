@@ -1,10 +1,10 @@
 package telran.employees;
 
-import static telran.employees.ServerConfigProperties.FILE_NAME;
+import static telran.employees.Config.FILE_NAME;
 import telran.net.Protocol;
 import telran.net.TcpServer;
 
-public class Main {
+public class MainServer {
     private static final int PORT = 4000;
 
     public static void main(String[] args) {

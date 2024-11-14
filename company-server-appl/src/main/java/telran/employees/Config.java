@@ -1,5 +1,5 @@
 package telran.employees;
 
-public interface ServerConfigProperties {
+public interface Config {
     String FILE_NAME = "employees.data";
 }

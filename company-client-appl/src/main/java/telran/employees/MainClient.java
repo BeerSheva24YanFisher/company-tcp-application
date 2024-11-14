@@ -9,7 +9,7 @@ import telran.view.Item;
 import telran.view.Menu;
 import telran.view.StandardInputOutput;
 
-public class Main {
+public class MainClient {
     private static final String HOST = "localhost";
     private static final int PORT = 4000;
 

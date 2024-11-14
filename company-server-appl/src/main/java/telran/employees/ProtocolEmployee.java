@@ -6,7 +6,7 @@ import java.util.NoSuchElementException;
 
 import org.json.JSONArray;
 
-import static telran.employees.ServerConfigProperties.FILE_NAME;
+import static telran.employees.Config.FILE_NAME;
 import telran.net.Protocol;
 import telran.net.Request;
 import telran.net.Response;
