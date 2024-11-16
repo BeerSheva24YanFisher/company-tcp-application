@@ -1,6 +1,7 @@
 package telran.employees;
 
-import java.lang.reflect.*;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 
@@ -83,5 +84,7 @@ public class CompanyProtocol implements Protocol {
         JSONArray jsonArray = new JSONArray(Arrays.stream(managers).map(Manager::toString).toList());
         return getOkResponse(jsonArray.toString());
     }
+
+    
 
 }

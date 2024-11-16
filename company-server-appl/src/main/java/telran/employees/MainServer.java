@@ -1,7 +1,5 @@
 package telran.employees;
 
-import static telran.employees.Config.FILE_NAME;
-import telran.net.Protocol;
 import telran.net.TcpServer;
 
 public class MainServer {
@@ -9,10 +7,11 @@ public class MainServer {
 
     public static void main(String[] args) {
         Company company = new CompanyImpl();
-        Protocol protocol = new CompanyProtocol(company);
-        TcpServer server = new TcpServer(protocol, PORT);
+        TcpServer server = new TcpServer(new CompanyProtocol(company), PORT);
         if (company instanceof Persistable persistable) {
-            persistable.restoreFromFile(FILE_NAME);
+            persistable.restoreFromFile(Config.FILE_NAME);
+            SaveThread autoSaveThread = new SaveThread(persistable);
+            autoSaveThread.start();
         }
         server.run();
     }
