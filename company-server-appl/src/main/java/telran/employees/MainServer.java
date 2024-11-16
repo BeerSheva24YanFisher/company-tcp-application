@@ -9,7 +9,7 @@ public class MainServer {
 
     public static void main(String[] args) {
         Company company = new CompanyImpl();
-        Protocol protocol = new ProtocolEmployee(company);
+        Protocol protocol = new CompanyProtocol(company);
         TcpServer server = new TcpServer(protocol, PORT);
         if (company instanceof Persistable persistable) {
             persistable.restoreFromFile(FILE_NAME);
