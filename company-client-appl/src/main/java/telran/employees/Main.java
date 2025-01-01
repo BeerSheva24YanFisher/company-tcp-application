@@ -8,8 +8,8 @@ import java.util.Arrays;
 
 import telran.net.*;
 
-public class MainClient {
-    private static final String HOST = "localhost";
+public class Main {
+    private static final String HOST = "34.228.155.150";
     private static final int PORT = 4000;
 
     public static void main(String[] args) {

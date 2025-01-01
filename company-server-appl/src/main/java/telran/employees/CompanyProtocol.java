@@ -85,6 +85,4 @@ public class CompanyProtocol implements Protocol {
         return getOkResponse(jsonArray.toString());
     }
 
-    
-
 }
